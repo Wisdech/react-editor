@@ -3,6 +3,7 @@
     "src/typings.d.ts"
   ],
   "compilerOptions": {
+    "resolveJsonModule": true,
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,

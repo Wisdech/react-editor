@@ -1,0 +1,71 @@
+{
+  "ui": {
+    "blockTunes": {
+      "toggler": {
+        "Click to tune": "单击以修改",
+        "or drag to move": "或拖拽排序"
+      }
+    },
+    "inlineToolbar": {
+      "converter": {
+        "Convert to": "切换类型"
+      }
+    },
+    "toolbar": {
+      "toolbox": {
+        "Add": "添加区块"
+      }
+    },
+    "popover": {
+      "Filter": "查找区块",
+      "Nothing found": "未找到",
+      "Convert to": "切换类型"
+    }
+  },
+  "toolNames": {
+    "Text": "段落",
+    "Heading": "标题",
+    "Link": "链接",
+    "Bold": "加粗",
+    "Italic": "斜体",
+    "Underline": "下划线",
+    "Image": "图片",
+    "Quote": "引用",
+    "List": "列表",
+    "Warning": "提示",
+    "Table": "表格"
+  },
+  "tools": {
+    "link": {
+      "Add a link": "添加链接地址"
+    },
+    "linkTool": {
+      "Link": "链接地址"
+    },
+    "header": {
+      "Heading 1": "一级标题",
+      "Heading 2": "二级标题",
+      "Heading 3": "三级标题",
+      "Heading 4": "四级标题"
+    },
+    "image": {
+      "Caption": "图片标题",
+      "Select an Image": "选择图片"
+    },
+    "stub": {
+      "The block can not be displayed correctly.": "区块无法正常显示"
+    }
+  },
+  "blockTunes": {
+    "delete": {
+      "Delete": "删除",
+      "Click to delete": "点击删除"
+    },
+    "moveUp": {
+      "Move up": "上移"
+    },
+    "moveDown": {
+      "Move down": "下移"
+    }
+  }
+}
