@@ -1,0 +1,25 @@
+.editor-js {
+    :global(h1) {
+        @apply text-2xl font-bold;
+    }
+
+    :global(h2) {
+        @apply text-xl font-bold;
+    }
+
+    :global(h3) {
+        @apply text-lg font-bold;
+    }
+
+    :global(h4, h5, h6) {
+        @apply text-base font-bold;
+    }
+
+    :global(div) {
+        @apply text-sm;
+    }
+
+    :global(a) {
+        @apply underline;
+    }
+}
