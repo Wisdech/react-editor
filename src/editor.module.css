@@ -22,4 +22,12 @@
     :global(a) {
         @apply underline;
     }
+
+    :global(.image-tool--withBackground .image-tool__image) {
+        @apply py-4;
+    }
+
+    :global(.image-tool__image-picture) {
+        @apply mx-auto my-0;
+    }
 }

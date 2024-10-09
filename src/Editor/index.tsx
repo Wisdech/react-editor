@@ -1,23 +1,62 @@
-import EditorJS, { EditorConfig } from '@editorjs/editorjs';
-import clsx from 'clsx';
-import React, { useEffect, useState } from 'react';
-import styles from '../editor.module.css';
-import { defaultConfig } from './config';
+import EditorJS, { EditorConfig, OutputData } from '@editorjs/editorjs';
+import ImageTool from '@editorjs/image';
+import LinkTool from '@editorjs/link';
+import { defaultData, toolsConfig } from './config';
 
-export type Config = {
-  linkEndpoint?: string;
-  imageFileEndpoint?: string;
-  imageUrlEndpoint?: string;
+import clsx from 'clsx';
+import React, { useEffect, useRef, useState } from 'react';
+
+import styles from '../editor.module.css';
+
+export type EditorProps = {
+  setInstance?: (instance: EditorJS | null) => void;
+  data?: OutputData;
+  config?: EditorConfig;
+  endpoints?: {
+    linkUrl?: string;
+    imageUrl?: string;
+    imageFile?: string;
+  };
 };
 
-export function Editor({ config, editorConfig }: { config: Config; editorConfig?: EditorConfig }) {
+export function Editor({ data, endpoints, setInstance }: EditorProps) {
   const [editor, setEditor] = useState<EditorJS | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const defaultConfig: EditorConfig = {
+    placeholder: '输入或添加内容...',
+    data: data ?? defaultData,
+    tools: {
+      ...toolsConfig,
+
+      linkTool: {
+        class: LinkTool,
+        config: { endpoint: endpoints?.linkUrl },
+      },
+
+      image: {
+        class: ImageTool,
+        config: {
+          endpoints: { byFile: endpoints?.imageFile, byUrl: endpoints?.imageUrl },
+        },
+      },
+    },
+  };
 
   useEffect(() => {
-    setEditor(new EditorJS(Object.assign(defaultConfig(config), editorConfig)));
+    if (containerRef.current) {
+      const editorInstance = new EditorJS({
+        holder: containerRef.current,
+        ...defaultConfig,
+      });
+      setEditor(editorInstance);
+      setInstance?.(editorInstance);
+    }
 
-    return () => editor?.destroy();
+    return () => {
+      editor?.destroy();
+    };
   }, []);
 
-  return <div id="editor-js" className={clsx('rounded-sm', styles['editor-js'])} />;
+  return <div ref={containerRef} className={clsx('rounded-sm', styles['editor-js'])} />;
 }
