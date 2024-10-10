@@ -36,6 +36,14 @@
     @apply mx-auto max-w-3xl pl-1;
 }
 
+.ol{
+    @apply list-decimal list-inside text-sm;
+}
+
+.ul{
+    @apply list-disc list-inside text-sm;
+}
+
 .image{
     &-caption{
         @apply mt-2 border-t border-zinc-950/5 py-2 text-center text-sm text-zinc-600;

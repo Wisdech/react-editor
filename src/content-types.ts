@@ -1,5 +1,5 @@
 export type BlockProps<T> = {
-  block: { data?: T };
+  block: { data: T };
 };
 
 export type AlertContent = {
@@ -15,6 +15,11 @@ export type TableContent = {
 export type HeaderContent = {
   level?: 1 | 2 | 3 | 4;
   text?: string;
+};
+
+export type ListContent = {
+  style?: 'ordered' | 'unordered';
+  items?: string[];
 };
 
 export type ImageContent = {
