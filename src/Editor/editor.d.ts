@@ -12,3 +12,7 @@ declare module '@editorjs/underline' {
 declare module '@editorjs/Warning' {
   export default ToolConstructable;
 }
+
+declare module '@editorjs/attaches' {
+  export default ToolConstructable;
+}

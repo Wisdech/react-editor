@@ -1,3 +1,4 @@
+import AttachesTool from '@editorjs/attaches';
 import EditorJS, { EditorConfig, OutputData } from '@editorjs/editorjs';
 import Header from '@editorjs/header';
 import ImageTool from '@editorjs/image';
@@ -16,15 +17,18 @@ export type EditorProps = {
   data?: OutputData;
   config?: EditorConfig;
   endpoints?: {
-    linkUrl?: string;
-    imageUrl?: string;
-    imageFile?: string;
+    uploadFile?: string;
+    uploadUrl?: string;
   };
 };
 
 export function Editor({ data, endpoints, setInstance }: EditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [editor, setEditor] = useState<EditorJS | null>(null);
+
+  const csrfHeader = {
+    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content'),
+  };
 
   const defaultConfig: EditorConfig = {
     placeholder: '输入或添加内容...',
@@ -44,10 +48,15 @@ export function Editor({ data, endpoints, setInstance }: EditorProps) {
       image: {
         class: ImageTool,
         config: {
-          endpoints: { byFile: endpoints?.imageFile, byUrl: endpoints?.imageUrl },
-          additionalRequestHeaders: {
-            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content'),
-          },
+          endpoints: { byFile: endpoints?.uploadFile, byUrl: endpoints?.uploadUrl },
+          additionalRequestHeaders: csrfHeader,
+        },
+      },
+      attaches: {
+        class: AttachesTool,
+        config: {
+          endpoint: endpoints?.uploadFile,
+          additionalRequestHeaders: csrfHeader,
         },
       },
       table: Table,
