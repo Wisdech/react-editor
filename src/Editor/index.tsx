@@ -23,8 +23,8 @@ export type EditorProps = {
 };
 
 export function Editor({ data, endpoints, setInstance }: EditorProps) {
-  const [editor, setEditor] = useState<EditorJS | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [editor, setEditor] = useState<EditorJS | null>(null);
 
   const defaultConfig: EditorConfig = {
     placeholder: '输入或添加内容...',
@@ -45,6 +45,9 @@ export function Editor({ data, endpoints, setInstance }: EditorProps) {
         class: ImageTool,
         config: {
           endpoints: { byFile: endpoints?.imageFile, byUrl: endpoints?.imageUrl },
+          additionalRequestHeaders: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content'),
+          },
         },
       },
       table: Table,
