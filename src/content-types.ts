@@ -17,6 +17,16 @@ export type HeaderContent = {
   text?: string;
 };
 
+export type ImageContent = {
+  stretched?: boolean;
+  withBackground?: boolean;
+  withBorder?: boolean;
+  caption?: string;
+  file?: Record<string, string> & {
+    url?: string;
+  };
+};
+
 export type DefaultContent = {
   text: string;
 };

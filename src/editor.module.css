@@ -31,3 +31,39 @@
         @apply mx-auto my-0;
     }
 }
+
+.default {
+    @apply mx-auto max-w-3xl pl-1;
+}
+
+.image{
+    &-caption{
+        @apply mt-2 border-t border-zinc-950/5 py-2 text-center text-sm text-zinc-600;
+    }
+}
+
+.table {
+    @apply mx-auto my-4 max-w-3xl;
+
+    &-content {
+        @apply min-w-full text-left text-sm/6 text-zinc-950;
+    }
+
+    &-body{
+        @apply border-t border-t-zinc-950/10;
+    }
+
+    &-title {
+        @apply border-b border-l border-b-zinc-950/10 border-l-zinc-950/5 px-4 py-2 font-bold;
+        @apply first:border-l-0 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))];
+    }
+
+    &-cell {
+        @apply relative border-b border-l border-zinc-950/5 border-l-zinc-950/5 px-4 py-2.5;
+        @apply first:border-l-0 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))];
+    }
+}
+
+.alert {
+    @apply mx-auto my-4 max-w-3xl;
+}
