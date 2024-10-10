@@ -30,6 +30,7 @@
     "Italic": "斜体",
     "Underline": "下划线",
     "Image": "图片",
+    "Attachment": "附件",
     "Quote": "引用",
     "List": "列表",
     "Warning": "提示",
@@ -54,6 +55,17 @@
       "With border": "显示边框",
       "Stretch image": "拉伸图像",
       "With background": "显示背景"
+    },
+    "attaches": {
+      "Caption": "图片标题",
+      "Select file to upload": "选择要上传的文件",
+      "With border": "显示边框",
+      "Stretch image": "拉伸图像",
+      "With background": "显示背景"
+    },
+    "list": {
+      "Unordered": "无序列表",
+      "Ordered": "有序列表"
     },
     "stub": {
       "The block can not be displayed correctly.": "区块无法正常显示"

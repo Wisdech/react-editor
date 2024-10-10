@@ -11,7 +11,7 @@ export function HeaderRender({ block }: BlockProps<HeaderContent>) {
   const { level, text } = block.data;
 
   return (
-    <div className="mx-auto my-4 max-w-3xl">
+    <div className="mx-auto my-4 max-w-2xl">
       <Typography.Title heading={level}>{text}</Typography.Title>
     </div>
   );
@@ -21,7 +21,7 @@ export function ListRender({ block }: BlockProps<ListContent>) {
   const { items, style } = block.data;
 
   return (
-    <div className="mx-auto my-2 max-w-3xl">
+    <div className="mx-auto my-2 max-w-2xl">
       {style == 'ordered' && (
         <ol className={styles['ol']}>{items?.map((text, index) => <li key={index}>{text}</li>)}</ol>
       )}

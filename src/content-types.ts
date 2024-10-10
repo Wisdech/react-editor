@@ -1,3 +1,5 @@
+import { IconProps } from './assets/icon';
+
 export type BlockProps<T> = {
   block: { data: T };
 };
@@ -29,6 +31,18 @@ export type ImageContent = {
   caption?: string;
   file?: Record<string, string> & {
     url?: string;
+  };
+};
+
+export type AttacheContent = {
+  title?: string;
+  file?: Record<string, string> & {
+    url?: string;
+    hash?: string;
+    name?: string;
+    size?: number;
+    type?: IconProps['type'];
+    extension?: string;
   };
 };
 

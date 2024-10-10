@@ -1,6 +1,6 @@
 import { OutputData } from '@editorjs/editorjs';
 import React from 'react';
-import { ImageRender } from './Media';
+import { AttacheRender, ImageRender } from './Media';
 import { TableRender } from './Table';
 import { AlertRender, HeaderRender, ListRender, TextRender } from './Texts';
 
@@ -21,6 +21,8 @@ export function Render({ data }: { data?: OutputData }) {
             return <ListRender block={block} key={block.id} />;
           case 'image':
             return <ImageRender block={block} key={block.id} />;
+          case 'attaches':
+            return <AttacheRender block={block} key={block.id} />;
           default:
             return <TextRender block={block} key={block.id} />;
         }

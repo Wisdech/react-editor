@@ -55,6 +55,7 @@ export function Editor({ data, endpoints, setInstance }: EditorProps) {
       attaches: {
         class: AttachesTool,
         config: {
+          buttonText: '点击上传文件',
           endpoint: endpoints?.uploadFile,
           additionalRequestHeaders: csrfHeader,
         },
