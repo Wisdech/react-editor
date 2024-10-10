@@ -1,9 +1,7 @@
 import EditorJS, { EditorConfig, OutputData } from '@editorjs/editorjs';
 import Header from '@editorjs/header';
 import ImageTool from '@editorjs/image';
-import LinkTool from '@editorjs/link';
 import List from '@editorjs/list';
-import Quote from '@editorjs/quote';
 import Table from '@editorjs/table';
 import Underline from '@editorjs/underline';
 import Warning from '@editorjs/Warning';
@@ -54,11 +52,11 @@ export function Editor({ data, endpoints, setInstance }: EditorProps) {
         class: Warning,
         config: { titlePlaceholder: '提示标题', messagePlaceholder: '提示内容' },
       },
-      quote: Quote,
-      linkTool: {
-        class: LinkTool,
-        config: { endpoint: endpoints?.linkUrl },
-      },
+      //quote: Quote,
+      //linkTool: {
+      //  class: LinkTool,
+      //  config: { endpoint: endpoints?.linkUrl },
+      //},
 
       underline: {
         class: Underline,
