@@ -36,6 +36,24 @@
     @apply mx-auto max-w-2xl pl-1;
 }
 
+.header {
+    .h1 {
+        @apply text-2xl font-bold;
+    }
+
+    .h2 {
+        @apply text-xl font-bold;
+    }
+
+    .h3 {
+        @apply text-lg font-bold;
+    }
+
+    .h4 {
+        @apply text-base font-bold;
+    }
+}
+
 .ol {
     @apply ml-4 list-decimal list-inside text-sm;
 }
@@ -65,7 +83,7 @@
     }
 
     &-title {
-        @apply text-sm w-64;
+        @apply text-sm w-64 whitespace-nowrap overflow-hidden overflow-ellipsis;
     }
 
     &-size {
@@ -73,7 +91,7 @@
     }
 
     &-action {
-        @apply ml-auto;
+        @apply ml-auto underline text-blue-400;
     }
 }
 
@@ -101,4 +119,24 @@
 
 .alert {
     @apply mx-auto my-4 max-w-2xl;
+
+    &-content {
+        @apply flex w-full rounded bg-orange-100/75 px-4 py-2;
+    }
+
+    &-icon {
+        @apply mr-2 size-5 fill-orange-400;
+    }
+
+    &-text {
+        @apply flex flex-col;
+    }
+
+    &-title {
+        @apply text-sm font-bold text-black;
+    }
+
+    &-message {
+        @apply text-sm text-zinc-700;
+    }
 }

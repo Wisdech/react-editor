@@ -1,4 +1,3 @@
-import { Link, Typography } from '@arco-design/web-react';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../assets/icon';
@@ -33,14 +32,12 @@ export function AttacheRender({ block }: BlockProps<AttacheContent>) {
       <div className={styles['attache']}>
         <Icon className={styles['attache-icon']} type={file?.type} />
         <div className={styles['attache-text']}>
-          <Typography.Ellipsis rows={1} className={styles['attache-title']} showTooltip>
-            {title}
-          </Typography.Ellipsis>
+          <div className={styles['attache-title']}>{title}</div>
           <div className={styles['attache-size']}>文件大小：{manSize(file?.size)}</div>
         </div>
-        <Link target="_blank" download={file?.name} href={file?.url} className={styles['attache-action']}>
+        <a target="_blank" download={file?.name} href={file?.url} className={styles['attache-action']}>
           下载
-        </Link>
+        </a>
       </div>
     </div>
   );

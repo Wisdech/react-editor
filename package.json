@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,14 +16,12 @@
     "prepare": "tsdx build"
   },
   "peerDependencies": {
-    "@arco-design/web-react": ">=2.63",
     "react": ">=18"
   },
-  "name": "@wisdech/react-richtext",
+  "name": "@wisdech/react-editor",
   "author": "Beijing Wisdech Technology Co., Ltd.",
-  "module": "dist/react-richtext.esm.js",
+  "module": "dist/react-editor.esm.js",
   "devDependencies": {
-    "@arco-design/web-react": "^2.64.0",
     "@svgr/rollup": "^8.1.0",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
@@ -51,8 +49,6 @@
     "@editorjs/table": "^2.4.1",
     "@editorjs/underline": "^1.1.0",
     "@editorjs/warning": "^1.4.0",
-    "@headlessui/react": "^2.1.8",
-    "@wisdech/tsutils": "^1.0.1",
     "clsx": "^2.1.1"
   }
 }
