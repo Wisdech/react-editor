@@ -3,7 +3,7 @@
 ## 安装使用
 
 ```bash
-npm install @wisdech/react-richtext
+npm install @wisdech/react-editor
 ```
 
 
