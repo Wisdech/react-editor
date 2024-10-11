@@ -54,14 +54,10 @@
       "Select an Image": "选择图片",
       "With border": "显示边框",
       "Stretch image": "拉伸图像",
-      "With background": "显示背景"
+      "With background": "显示背景",
+      "Couldn’t upload image. Please try another.": "图片上传失败，请更换图片或重试"
     },
     "attaches": {
-      "Caption": "图片标题",
-      "Select file to upload": "选择要上传的文件",
-      "With border": "显示边框",
-      "Stretch image": "拉伸图像",
-      "With background": "显示背景"
     },
     "list": {
       "Unordered": "无序列表",

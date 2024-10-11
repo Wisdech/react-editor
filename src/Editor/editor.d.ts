@@ -9,7 +9,7 @@ declare module '@editorjs/underline' {
   export default ToolConstructable;
 }
 
-declare module '@editorjs/Warning' {
+declare module '@editorjs/warning' {
   export default ToolConstructable;
 }
 

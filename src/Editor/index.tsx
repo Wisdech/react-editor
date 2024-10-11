@@ -5,7 +5,7 @@ import ImageTool from '@editorjs/image';
 import List from '@editorjs/list';
 import Table from '@editorjs/table';
 import Underline from '@editorjs/underline';
-import Warning from '@editorjs/Warning';
+import Warning from '@editorjs/warning';
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -58,6 +58,7 @@ export function Editor({ data, endpoints, setInstance }: EditorProps) {
           buttonText: '点击上传文件',
           endpoint: endpoints?.uploadFile,
           additionalRequestHeaders: csrfHeader,
+          errorMessage: '文件上传失败',
         },
       },
       table: Table,

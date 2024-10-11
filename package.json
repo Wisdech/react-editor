@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -17,16 +17,13 @@
   },
   "peerDependencies": {
     "@arco-design/web-react": ">=2.63",
-    "@inertiajs/react": ">=1.2",
     "react": ">=18"
   },
-  "name": "@wisdech/inertia-richtext",
+  "name": "@wisdech/react-richtext",
   "author": "Beijing Wisdech Technology Co., Ltd.",
-  "module": "dist/inertia-richtext.esm.js",
+  "module": "dist/react-richtext.esm.js",
   "devDependencies": {
     "@arco-design/web-react": "^2.64.0",
-    "@inertiajs/react": "^1.2.0",
-    "@rollup/plugin-url": "^8.0.2",
     "@svgr/rollup": "^8.1.0",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",

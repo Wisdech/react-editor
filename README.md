@@ -1,9 +1,9 @@
-# Inertia+Laravel React 富文本组件
+# React 富文本组件
 
 ## 安装使用
 
 ```bash
-npm install @wisdech/inertia-richtext
+npm install @wisdech/react-richtext
 ```
 
 
