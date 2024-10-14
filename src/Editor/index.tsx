@@ -16,13 +16,11 @@ export type EditorProps = {
   setInstance?: (instance: EditorJS | null) => void;
   data?: OutputData;
   config?: EditorConfig;
-  endpoints?: {
-    uploadFile?: string;
-    uploadUrl?: string;
-  };
+  uploader?: string;
+  requestHeaders?: Record<string, any>;
 };
 
-export function Editor({ data, endpoints, setInstance }: EditorProps) {
+export function Editor({ setInstance, data, uploader, requestHeaders }: EditorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [editor, setEditor] = useState<EditorJS | null>(null);
 
@@ -45,22 +43,26 @@ export function Editor({ data, endpoints, setInstance }: EditorProps) {
         config: { levels: [1, 2, 3, 4], placeholder: '输入标题' },
       },
       list: List,
-      image: {
-        class: ImageTool,
-        config: {
-          endpoints: { byFile: endpoints?.uploadFile, byUrl: endpoints?.uploadUrl },
-          additionalRequestHeaders: csrfHeader,
+
+      ...(uploader && {
+        image: {
+          class: ImageTool,
+          config: {
+            endpoints: { byFile: uploader, byUrl: uploader },
+            additionalRequestHeaders: requestHeaders ?? csrfHeader,
+          },
         },
-      },
-      attaches: {
-        class: AttachesTool,
-        config: {
-          buttonText: '点击上传文件',
-          endpoint: endpoints?.uploadFile,
-          additionalRequestHeaders: csrfHeader,
-          errorMessage: '文件上传失败',
+        attaches: {
+          class: AttachesTool,
+          config: {
+            buttonText: '点击上传文件',
+            endpoint: uploader,
+            additionalRequestHeaders: requestHeaders ?? csrfHeader,
+            errorMessage: '文件上传失败',
+          },
         },
-      },
+      }),
+
       table: Table,
       warning: {
         class: Warning,
