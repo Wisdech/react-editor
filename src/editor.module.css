@@ -37,33 +37,35 @@
 }
 
 .default {
-    @apply mx-auto max-w-2xl pl-1;
+    @apply mx-auto max-w-2xl;
 }
 
 .header {
-    .h1 {
+    @apply mx-auto my-4 max-w-2xl;
+
+    &-h1 {
         @apply mt-6 text-2xl font-bold;
     }
 
-    .h2 {
+    &-h2 {
         @apply mt-6 text-xl font-bold;
     }
 
-    .h3 {
+    &-h3 {
         @apply mt-6 text-lg font-bold;
     }
 
-    .h4 {
+    &-h4 {
         @apply mt-6 text-base font-bold;
     }
 }
 
 .ol {
-    @apply ml-4 list-inside list-decimal text-base leading-8;
+    @apply ml-6 list-inside list-decimal text-base leading-8;
 }
 
 .ul {
-    @apply ml-4 list-inside list-disc text-base leading-8;
+    @apply ml-6 list-inside list-disc text-base leading-8;
 }
 
 .image {

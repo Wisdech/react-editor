@@ -11,7 +11,7 @@ export function HeaderRender({ block }: BlockProps<HeaderContent>) {
   const { level, text } = block.data;
 
   return (
-    <div className="mx-auto my-4 max-w-2xl">
+    <div className={styles['header']}>
       {level == 1 && <h1 className={styles['header-h1']}>{text}</h1>}
       {level == 2 && <h2 className={styles['header-h2']}>{text}</h2>}
       {level == 3 && <h3 className={styles['header-h3']}>{text}</h3>}
