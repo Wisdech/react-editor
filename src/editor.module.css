@@ -60,12 +60,12 @@
     }
 }
 
-.ol {
-    @apply ml-6 list-inside list-decimal text-base leading-8;
+.ul {
+    @apply list-inside list-disc text-base leading-8;
 }
 
-.ul {
-    @apply ml-6 list-inside list-disc text-base leading-8;
+.ol {
+    @apply list-inside list-decimal text-base leading-8;
 }
 
 .image {
