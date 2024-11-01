@@ -16,7 +16,7 @@
     }
 
     :global(div) {
-        @apply text-sm;
+        @apply text-base leading-8;
     }
 
     :global(a) {
@@ -30,6 +30,10 @@
     :global(.image-tool__image-picture) {
         @apply mx-auto my-0;
     }
+
+    :global(.codex-editor__redactor){
+        @apply pb-12 !important;
+    }
 }
 
 .default {
@@ -38,28 +42,28 @@
 
 .header {
     .h1 {
-        @apply text-2xl font-bold;
+        @apply mt-6 text-2xl font-bold;
     }
 
     .h2 {
-        @apply text-xl font-bold;
+        @apply mt-6 text-xl font-bold;
     }
 
     .h3 {
-        @apply text-lg font-bold;
+        @apply mt-6 text-lg font-bold;
     }
 
     .h4 {
-        @apply text-base font-bold;
+        @apply mt-6 text-base font-bold;
     }
 }
 
 .ol {
-    @apply ml-4 list-decimal list-inside text-sm;
+    @apply ml-4 list-inside list-decimal text-base leading-8;
 }
 
 .ul {
-    @apply ml-4 list-disc list-inside text-sm;
+    @apply ml-4 list-inside list-disc text-base leading-8;
 }
 
 .image {
@@ -69,13 +73,11 @@
 }
 
 .attache {
-
-    @apply flex border px-4 py-2 rounded shadow-sm;
+    @apply flex rounded border px-4 py-2 shadow-sm;
     @apply items-center;
 
-
     &-icon {
-        @apply size-10 mr-4;
+        @apply mr-4 size-10;
     }
 
     &-text {
@@ -83,7 +85,7 @@
     }
 
     &-title {
-        @apply text-sm w-64 whitespace-nowrap overflow-hidden overflow-ellipsis;
+        @apply w-64 overflow-hidden overflow-ellipsis whitespace-nowrap text-sm;
     }
 
     &-size {
@@ -91,7 +93,7 @@
     }
 
     &-action {
-        @apply ml-auto underline text-blue-400;
+        @apply ml-auto text-blue-400 underline;
     }
 }
 
